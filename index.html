@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validacion de formularios con javascript</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <form name="formulario" id="formulario" class="formulario">
+            <!--grupo usuario-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="aldemar_123" autocomplete="off">
+                    <img src="iconos/descarga.png" class="formulario__validacion-estado" alt="imagen_denegado">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                   
+                </div>
+                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+            <!--grupo nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label class="formulario__label" for="nombre">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="aldemar doe" autocomplete="off">
+                    <img src="iconos/descarga.png " class="formulario__validacion-estado"   alt="">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                </div>
+                <p class="formulario__input-error">El nombre tiene que ser de 1 a 40 caracteres y solo puede contener, letras, espacios en blanco y acentos</p>
+            </div>
+            <!--grupo contraseña-->
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password" id="password">
+                    <img src="iconos/descarga.png" class="formulario__validacion-estado" alt="">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 diguitos</p>
+            </div>
+            <!--contraseña 2-->
+            <div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password2" id="password2">
+                    <img src="iconos/descarga.png" class="formulario__validacion-estado" alt="">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                </div>
+               <p class="formulario__input-error">Ambas contraseñas deben ser iguales</p>
+            </div>
+            <!--correo electronico-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electronico</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" autocomplete="off">
+                    <img src="iconos/descarga.png" class="formulario__validacion-estado" alt="">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                </div>
+                <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guiones bajos.</p>
+            </div>
+            <!--campo telefono--> 
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Telefono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3204563212">
+                    <img src="iconos/descarga.png" class="formulario__validacion-estado" alt="">
+                    <img src="iconos/1200px-Check_green_icon.svg.png " class="formulario__validacion-estado-c" alt="imagen-correccto">
+                </div>
+                <p class="formulario__input-error">el telefono solo puede contener numero y el maximo son 14 diguitos</p>
+            </div>
+            <!--grupo terminos y condiciones-->
+            <div class="formulario__grupo" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input  type="checkbox" class="formulario__checkbox" name="terminos" id="terminos">
+                    Acepto Los Terminos y Condiciones
+                </label>
+            </div>
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><img src="iconos/warning.png" class=""  alt=""> <b>error:</b> por favor llenar el formulario correctamente</p>
+            </div>
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <input type="submit" name="inicio" id="inicio" class="formulario__btn"  value="enviar">
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">el formulario se envio correctamente</p>
+            </div>
+        </form>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
